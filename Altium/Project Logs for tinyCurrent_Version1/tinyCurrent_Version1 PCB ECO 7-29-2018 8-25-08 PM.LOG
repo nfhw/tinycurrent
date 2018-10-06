@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NetR10_2 Pin=U2-1
+Removed Pin From Net: NetName=NetJ6_4 Pin=U2-3
+Added Pin To Net: NetName=NetJ6_4 Pin=U2-1
+Added Pin To Net: NetName=NetR10_2 Pin=U2-3
+Added Room: Name=tinyCurrent_Version1

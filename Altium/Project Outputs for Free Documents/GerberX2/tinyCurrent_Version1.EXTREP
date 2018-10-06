@@ -1,0 +1,27 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: tinyCurrent_Version1.GBR   9/9/2018  7:25:06 PM
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.gbr                Top Layer                               
+.gbr                Bottom Layer                            
+.gbr                Bottom Pad Master                       
+.gbr                Top Pad Master                          
+.gbr                Top Paste                               
+.gbr                Bottom Paste                            
+.gbr                Bottom Overlay                          
+.gbr                Top Solder                              
+.gbr                Top Overlay                             
+.gbr                Bottom Solder                           
+.gbr                Keep-Out Layer                          
+.gbr                Mechanical 13                           
+.gbr                Mechanical 7                            
+.gbr                Mechanical 15                           
+.gbr                Mechanical 1                            
+.gbr                Mechanical 11                           
+.gbr                Route Guide                             
+.gbr                Profile                                 
+------------------------------------------------------------------------------------------

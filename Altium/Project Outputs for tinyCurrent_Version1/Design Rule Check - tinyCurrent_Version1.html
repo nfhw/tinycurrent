@@ -1,0 +1,471 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD17\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12/20/2017</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12:40:43 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc" class="file"><acronym title="\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc">\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">1</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">40</td></tr>
+</table>
+</td>
+</table><a name="IDZ2PMASKTU25EDK1VKRRKLWCPIMOJMORSSXGRFELT1ZTUZ3XKDM"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGZYQNXNNHU0VFNTMID2N2JJQ2IKYYARXOQINQQLS2XFGO35E2KJL">Design contains shelved or modified (but not repoured) polygons. The result of DRC is not correct. Recommended to restore/repour all polygons and proceed with DRC again</a></td>
+<td class="column2">1</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">1</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUOMVALQYFFLWOAQDDBE0MBMYLF3Z0NMD41SK4FHYXLLA1TF3CTWD">Clearance Constraint (Gap=0mm) (OnLayer('Bottom Layer')),(OnLayer('Multi-Layer'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2YBHUGC1SICENPZQ20CP0NCGNMM4QBPBEAEMWDMTEAVZP5LPC0KM">Clearance Constraint (Gap=0.635mm) (OnLayer('Multi-Layer')),(OnLayer('Multi-Layer'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEYIVJDNQDIGPB0NTQFD0SHUE3EKYOW3MJKUQHBHD4XDRJG32FI4B">Clearance Constraint (Gap=0.5mm) (OnLayer('Top Layer')),(OnLayer('Multi-Layer'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2O3KOHFJWFL2B33K020JWTPA2F0J3FT50JDPG1CBC15ZCXXUU0XM">Clearance Constraint (Gap=0.635mm) (OnLayer('Bottom Layer')),(OnLayer('Keep-Out Layer'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDR5RJFOF5PYVBB0HYBCYQ1HUNJHNVSP1UNIB0LPDRANOU4QL4WSLJ">Clearance Constraint (Gap=0.635mm) (OnLayer('Top Layer')),(OnLayer('Keep-Out Layer'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID31H4ALMCXSQWBGAJDOQQYZZETID3ALF3Q4OL5QDACYO0RWAJLNAH">Clearance Constraint (Gap=0.635mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0334TGNKTFWS3SZEV32Y2ET2IYZAIA4CMQI5NTFEO0EFS1WZKM">Clearance Constraint (Gap=0.635mm) (OnLayer('Bottom Layer')),(OnLayer('Bottom Layer'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOJIVSLUNLCTEDMF4XRXZYXIY3IF0NOWEUNVRKRJOTZPPEEDXLFKM">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXHHZAEU2K5YRPBUGNEMLRMJWGBQVHDWE2RJJE4CY5TUHDALHUUXE">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOMFDGXBVU21HDRMWPXLQCX13JHMEIQNXGSYCF1JQ1YQ3Z2MNW0NF">Width Constraint (Min=0.203mm) (Max=3.81mm) (Preferred=0.381mm) (All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBSHSSKDPXFYCB5EYHUEDMZJOCD5KEJQBFSRLHPEAJPIT3GI1UIHO">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFM2DANBNVTB5C2SJA5JHTKNDCJQSWNHIZSSMVQLY4EQDILK3TOKJ">Hole Size Constraint (Min=0.025mm) (Max=5mm) (All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3NUSAQ5VTJTCHCDLF0UM0DWR3IPZN2VM1VNF2JFMLQSTPJAEFK0M">Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1'))</a></td>
+<td class="column2">37</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4A0R5TG0IWLINLCRKHNCBRDENIJQTMEP1EOVAPHBK00RNZ4WF2GM">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">40</td>
+</tr>
+</table><br><a name="IDDESQIBHAB2IFLQGUBKV2I2TYWIDEQ4ZRCPLWH1EOUBY3O10R3TNC"><h2>Warnings</h2></a><a name="IDGZYQNXNNHU0VFNTMID2N2JJQ2IKYYARXOQINQQLS2XFGO35E2KJL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Design contains shelved or modified (but not repoured) polygons. The result of DRC is not correct. Recommended to restore/repour all polygons and proceed with DRC again</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Polygon named: GND_pour</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDOMFDGXBVU21HDRMWPXLQCX13JHMEIQNXGSYCF1JQ1YQ3Z2MNW0NF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Width Constraint (Min=0.203mm) (Max=3.81mm) (Preferred=0.381mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.246mil|Location2.X=3352.406mil|Location1.Y=1921.708mil|Location2.Y=1928.876mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.246mil|Location2.X=3352.406mil|Location1.Y=1921.708mil|Location2.Y=1928.876mil|Absolute=True">Width Constraint: Track (40.853mm,14.836mm)(40.88mm,14.863mm) on Bottom Layer Actual Width = 0mm, Target Width = 0.203mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDFM2DANBNVTB5C2SJA5JHTKNDCJQSWNHIZSSMVQLY4EQDILK3TOKJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.025mm) (Max=5mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3104.493mil|Location2.X=3341.963mil|Location1.Y=3778.903mil|Location2.Y=4016.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3104.493mil|Location2.X=3341.963mil|Location1.Y=3778.903mil|Location2.Y=4016.373mil|Absolute=True">Hole Size Constraint: (6mm &gt; 5mm) Pad J4-1(37.87mm,65mm) on Multi-Layer Actual Hole Size = 6mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2085.989mil|Location2.X=2323.459mil|Location1.Y=3778.903mil|Location2.Y=4016.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2085.989mil|Location2.X=2323.459mil|Location1.Y=3778.903mil|Location2.Y=4016.373mil|Absolute=True">Hole Size Constraint: (6mm &gt; 5mm) Pad J3-1(12mm,65mm) on Multi-Layer Actual Hole Size = 6mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID3NUSAQ5VTJTCHCDLF0UM0DWR3IPZN2VM1VNF2JFMLQSTPJAEFK0M"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2954.843mil|Location1.Y=0mil|Location2.Y=4139.005mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2954.843mil|Location1.Y=0mil|Location2.Y=4139.005mil|Absolute=True">Room Definition: Between Component BC1-J01001A1944 (24.928mm,65.006mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3058.493mil|Location1.Y=0mil|Location2.Y=3508.059mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3058.493mil|Location1.Y=0mil|Location2.Y=3508.059mil|Absolute=True">Room Definition: Between SMT Small Component C4-10pF (33.011mm,53.68mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3278.976mil|Location1.Y=0mil|Location2.Y=3560.279mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3278.976mil|Location1.Y=0mil|Location2.Y=3560.279mil|Absolute=True">Room Definition: Between SMT Small Component R15-1K 0.05% (37.686mm,55.631mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3138.218mil|Location1.Y=0mil|Location2.Y=3369.278mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3138.218mil|Location1.Y=0mil|Location2.Y=3369.278mil|Absolute=True">Room Definition: Between SMT Small Component R14-2K2 0.05% (34.911mm,49.98mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3449.345mil|Location1.Y=0mil|Location2.Y=3397.639mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3449.345mil|Location1.Y=0mil|Location2.Y=3397.639mil|Absolute=True">Room Definition: Between SMT Small Component R11-2K2 0.05% (42.813mm,50.7mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2946.58mil|Location1.Y=0mil|Location2.Y=3564.439mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2946.58mil|Location1.Y=0mil|Location2.Y=3564.439mil|Absolute=True">Room Definition: Between SMT Small Component R10-270R (30.043mm,54.937mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3609.252mil|Location1.Y=0mil|Location2.Y=3486.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3609.252mil|Location1.Y=0mil|Location2.Y=3486.22mil|Absolute=True">Room Definition: Between SOIC Component U1-MAX4239AUT (45.6mm,52.5mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3600.926mil|Location1.Y=0mil|Location2.Y=2396.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3600.926mil|Location1.Y=0mil|Location2.Y=2396.2mil|Absolute=True">Room Definition: Between Component R1-0R01 0.1% (44.5mm,25.8mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2877.744mil|Location1.Y=0mil|Location2.Y=3559.206mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2877.744mil|Location1.Y=0mil|Location2.Y=3559.206mil|Absolute=True">Room Definition: Between Component U2-TSV911AILT (27.27mm,53.799mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3598.425mil|Location1.Y=0mil|Location2.Y=2500.001mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3598.425mil|Location1.Y=0mil|Location2.Y=2500.001mil|Absolute=True">Room Definition: Between SMT Small Component R9-10R 0.05% (45.6mm,28.5mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3291.338mil|Location1.Y=0mil|Location2.Y=2358.269mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3291.338mil|Location1.Y=0mil|Location2.Y=2358.269mil|Absolute=True">Room Definition: Between SMT Small Component R2-10K 0.05% (38.8mm,24.3mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2087.757mil|Location1.Y=0mil|Location2.Y=3296.417mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2087.757mil|Location1.Y=0mil|Location2.Y=3296.417mil|Absolute=True">Room Definition: Between SMT Small Component D1-156120GS75000 (6.2mm,48.6mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2970.758mil|Location1.Y=0mil|Location2.Y=3622.057mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2970.758mil|Location1.Y=0mil|Location2.Y=3622.057mil|Absolute=True">Room Definition: Between SMT Small Component C2-0u1 16V (30.032mm,57.325mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=3505.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=3505.906mil|Absolute=True">Room Definition: Between SMT Small Component U3-STM809RWX6F (4.95mm,52.6mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2731.686mil|Location1.Y=0mil|Location2.Y=3577.986mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2731.686mil|Location1.Y=0mil|Location2.Y=3577.986mil|Absolute=True">Room Definition: Between SMT Small Component R7-51K 1% (24.585mm,55.281mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2731.686mil|Location1.Y=0mil|Location2.Y=3459.876mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2731.686mil|Location1.Y=0mil|Location2.Y=3459.876mil|Absolute=True">Room Definition: Between SMT Small Component R6-150K 1% (24.585mm,52.281mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2076.773mil|Location1.Y=0mil|Location2.Y=3472.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2076.773mil|Location1.Y=0mil|Location2.Y=3472.441mil|Absolute=True">Room Definition: Between SMT Small Component R4-270R (7.95mm,52.6mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3449.345mil|Location1.Y=0mil|Location2.Y=3547.244mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3449.345mil|Location1.Y=0mil|Location2.Y=3547.244mil|Absolute=True">Room Definition: Between SMT Small Component R3-6K8 0.05% (42.813mm,54.5mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3364.057mil|Location1.Y=0mil|Location2.Y=3545.044mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3364.057mil|Location1.Y=0mil|Location2.Y=3545.044mil|Absolute=True">Room Definition: Between SMT Small Component R5-1K 0.05% (40.647mm,54.444mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3276.012mil|Location1.Y=0mil|Location2.Y=3304.279mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3276.012mil|Location1.Y=0mil|Location2.Y=3304.279mil|Absolute=True">Room Definition: Between SMT Small Component R8-270R (37.611mm,49.129mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3585.45mil|Location1.Y=0mil|Location2.Y=3314.276mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3585.45mil|Location1.Y=0mil|Location2.Y=3314.276mil|Absolute=True">Room Definition: Between SMT Small Component R12-270R (45.47mm,49.383mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3613.421mil|Location1.Y=0mil|Location2.Y=3550.671mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3613.421mil|Location1.Y=0mil|Location2.Y=3550.671mil|Absolute=True">Room Definition: Between SMT Small Component C1-0u1 16V (46.356mm,55.512mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3359.135mil|Location1.Y=0mil|Location2.Y=3392.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3359.135mil|Location1.Y=0mil|Location2.Y=3392.449mil|Absolute=True">Room Definition: Between SMT Small Component C3-10pF (40.647mm,50.743mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3697.834mil|Location1.Y=0mil|Location2.Y=3160.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3697.834mil|Location1.Y=0mil|Location2.Y=3160.433mil|Absolute=True">Room Definition: Between DIP Component SW1-MFP 230 (45.3mm,38mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3318.784mil|Location1.Y=0mil|Location2.Y=2154.161mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3318.784mil|Location1.Y=0mil|Location2.Y=2154.161mil|Absolute=True">Room Definition: Between Small Component J2-4mmBindingPostBlack (34.4mm,13.9mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2446.851mil|Location1.Y=0mil|Location2.Y=4124.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2446.851mil|Location1.Y=0mil|Location2.Y=4124.016mil|Absolute=True">Room Definition: Between Small Component J3-4mmBindingPostRed (15.8mm,60.7mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3490.157mil|Location1.Y=0mil|Location2.Y=4124.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3490.157mil|Location1.Y=0mil|Location2.Y=4124.016mil|Absolute=True">Room Definition: Between Small Component J4-4mmBindingPostBlack (29.2mm,70.9mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2138.779mil|Location1.Y=0mil|Location2.Y=3160.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2138.779mil|Location1.Y=0mil|Location2.Y=3160.433mil|Absolute=True">Room Definition: Between DIP Component SW2-MFP 230 (5.7mm,38mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2569.939mil|Location1.Y=0mil|Location2.Y=2151.461mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2569.939mil|Location1.Y=0mil|Location2.Y=2151.461mil|Absolute=True">Room Definition: Between Small Component J1-4mmBindingPostRed (15.4mm,13.9mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2739.744mil|Location1.Y=0mil|Location2.Y=3440.135mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2739.744mil|Location1.Y=0mil|Location2.Y=3440.135mil|Absolute=True">Room Definition: Between SMT Small Component BT1-79527141 (17.462mm,37.379mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3293.199mil|Location1.Y=0mil|Location2.Y=3477.546mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3293.199mil|Location1.Y=0mil|Location2.Y=3477.546mil|Absolute=True">Room Definition: Between SOIC Component U4-MAX4239AUT (37.572mm,52.28mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=4370.897mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2000mil|Location1.Y=0mil|Location2.Y=4370.897mil|Absolute=True">Room Definition: Between SMT Small Component FD1-FIDUCIAL1X2 (0.1mm,76.4mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3646.488mil|Location1.Y=0mil|Location2.Y=1494.127mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3646.488mil|Location1.Y=0mil|Location2.Y=1494.127mil|Absolute=True">Room Definition: Between SMT Small Component FD2-FIDUCIAL1X2 (1.7mm,3.4mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3646.489mil|Location1.Y=0mil|Location2.Y=4370.897mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3646.489mil|Location1.Y=0mil|Location2.Y=4370.897mil|Absolute=True">Room Definition: Between SMT Small Component FD3-FIDUCIAL1X2 (38.7mm,4mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3138.218mil|Location1.Y=0mil|Location2.Y=3514.948mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3138.218mil|Location1.Y=0mil|Location2.Y=3514.948mil|Absolute=True">Room Definition: Between SMT Small Component R13-6K8 0.05% (34.911mm,53.68mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3084.316mil|Location1.Y=0mil|Location2.Y=3110.379mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3084.316mil|Location1.Y=0mil|Location2.Y=3110.379mil|Absolute=True">Room Definition: Between Component J5-1.25mm JST Connector (30.066mm,41.353mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2652.709mil|Location1.Y=0mil|Location2.Y=3642.161mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2652.709mil|Location1.Y=0mil|Location2.Y=3642.161mil|Absolute=True">Room Definition: Between SMT Small Component R16-RPot (19.928mm,56.011mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

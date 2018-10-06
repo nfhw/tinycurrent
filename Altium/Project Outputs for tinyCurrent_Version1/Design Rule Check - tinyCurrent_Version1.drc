@@ -1,0 +1,94 @@
+Protel Design System Design Rule Check
+PCB File : \\VBOXSVR\root\Xingular\tinycurrent\Altium\tinyCurrent_Version1.PcbDoc
+Date     : 12/20/2017
+Time     : 12:40:43 AM
+
+WARNING: Design contains shelved or modified (but not repoured) polygons. The result of DRC is not correct. Recommended to restore/repour all polygons and proceed with DRC again
+   Polygon named: GND_pour
+
+Processing Rule : Clearance Constraint (Gap=0mm) (OnLayer('Bottom Layer')),(OnLayer('Multi-Layer'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.635mm) (OnLayer('Multi-Layer')),(OnLayer('Multi-Layer'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.5mm) (OnLayer('Top Layer')),(OnLayer('Multi-Layer'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.635mm) (OnLayer('Bottom Layer')),(OnLayer('Keep-Out Layer'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.635mm) (OnLayer('Top Layer')),(OnLayer('Keep-Out Layer'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.635mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.635mm) (OnLayer('Bottom Layer')),(OnLayer('Bottom Layer'))
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.203mm) (Max=3.81mm) (Preferred=0.381mm) (All)
+   Violation between Width Constraint: Track (40.853mm,14.836mm)(40.88mm,14.863mm) on Bottom Layer Actual Width = 0mm, Target Width = 0.203mm
+Rule Violations :1
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=5mm) (All)
+   Violation between Hole Size Constraint: (6mm > 5mm) Pad J4-1(37.87mm,65mm) on Multi-Layer Actual Hole Size = 6mm
+   Violation between Hole Size Constraint: (6mm > 5mm) Pad J3-1(12mm,65mm) on Multi-Layer Actual Hole Size = 6mm
+Rule Violations :2
+
+Processing Rule : Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1'))
+   Violation between Room Definition: Between Component BC1-J01001A1944 (24.928mm,65.006mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component C4-10pF (33.011mm,53.68mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R15-1K 0.05% (37.686mm,55.631mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R14-2K2 0.05% (34.911mm,49.98mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R11-2K2 0.05% (42.813mm,50.7mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R10-270R (30.043mm,54.937mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SOIC Component U1-MAX4239AUT (45.6mm,52.5mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between Component R1-0R01 0.1% (44.5mm,25.8mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between Component U2-TSV911AILT (27.27mm,53.799mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R9-10R 0.05% (45.6mm,28.5mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R2-10K 0.05% (38.8mm,24.3mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component D1-156120GS75000 (6.2mm,48.6mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component C2-0u1 16V (30.032mm,57.325mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component U3-STM809RWX6F (4.95mm,52.6mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R7-51K 1% (24.585mm,55.281mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R6-150K 1% (24.585mm,52.281mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R4-270R (7.95mm,52.6mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R3-6K8 0.05% (42.813mm,54.5mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R5-1K 0.05% (40.647mm,54.444mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R8-270R (37.611mm,49.129mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R12-270R (45.47mm,49.383mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component C1-0u1 16V (46.356mm,55.512mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component C3-10pF (40.647mm,50.743mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between DIP Component SW1-MFP 230 (45.3mm,38mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between Small Component J2-4mmBindingPostBlack (34.4mm,13.9mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between Small Component J3-4mmBindingPostRed (15.8mm,60.7mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between Small Component J4-4mmBindingPostBlack (29.2mm,70.9mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between DIP Component SW2-MFP 230 (5.7mm,38mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between Small Component J1-4mmBindingPostRed (15.4mm,13.9mm) on Top Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component BT1-79527141 (17.462mm,37.379mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SOIC Component U4-MAX4239AUT (37.572mm,52.28mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component FD1-FIDUCIAL1X2 (0.1mm,76.4mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component FD2-FIDUCIAL1X2 (1.7mm,3.4mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component FD3-FIDUCIAL1X2 (38.7mm,4mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R13-6K8 0.05% (34.911mm,53.68mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between Component J5-1.25mm JST Connector (30.066mm,41.353mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+   Violation between Room Definition: Between SMT Small Component R16-RPot (19.928mm,56.011mm) on Bottom Layer And Room tinyCurrent_Version1 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('tinyCurrent_Version1')) 
+Rule Violations :37
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 40
+Waived Violations : 0
+Time Elapsed        : 00:00:01

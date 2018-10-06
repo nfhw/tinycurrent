@@ -1,0 +1,30 @@
+Net Status Report
+Filename     : \\VBOXSVR\Xingular\tinycurrent\tinyCurrent_Version1.PcbDoc
+Date         : 11/1/2017
+Time         : 10:53:23 PM
+Time Elapsed : 00:00:00
+
+Nets, Layer, Length
+    +IN, Signal Layers Only, 115.4395mm
+    +V, Signal Layers Only, 138.4734mm
+    -IN, Signal Layers Only, 81.1459mm
+    -V, Signal Layers Only, 138.0222mm
+    B+, Signal Layers Only, 58.0367mm
+    NetBC1_1, Signal Layers Only, 54.8503mm
+    NetC3_1, Signal Layers Only, 8.2573mm
+    NetC3_2, Signal Layers Only, 17.4929mm
+    NetC4_1, Signal Layers Only, 6.1419mm
+    NetD1_2, Signal Layers Only, 3.1914mm
+    NetR10_2, Signal Layers Only, 5.9889mm
+    NetR12_1, Signal Layers Only, 18.3543mm
+    NetR12_2, Signal Layers Only, 2.1717mm
+    NetR13_2, Signal Layers Only, 2mm
+    NetR1_1, Signal Layers Only, 9.5646mm
+    NetR1_3, Signal Layers Only, 2.35mm
+    NetR3_2, Signal Layers Only, 2.1mm
+    NetR4_2, Signal Layers Only, 5.0923mm
+    NetR6_1, Signal Layers Only, 21.6636mm
+    NetR8_2, Signal Layers Only, 2.2mm
+    NetR9_1, Signal Layers Only, 15.8148mm
+    VGND, Signal Layers Only, 102.462mm
+count : 22

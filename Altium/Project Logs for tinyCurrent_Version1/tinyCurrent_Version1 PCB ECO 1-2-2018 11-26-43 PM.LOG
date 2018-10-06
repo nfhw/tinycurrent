@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=-V Pin=R16-1
+Removed Pin From Net: NetName=+V Pin=R16-2
+Removed Pin From Net: NetName=NetR6_1 Pin=R16-3
+Removed Member From Class: ClassName=tinyCurrent_Version1 Member=R16
+Change Component Comment : Designator=R7 Old Comment=51K 1% New Comment=100K 1%
+Change Component Comment : Designator=R6 Old Comment=150K 1% New Comment=100K 1%
+Change Component Comment : Designator=R4 Old Comment=270R New Comment=470R
+Added Component: Designator=S?(452403012014)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/452403012014.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "452403012014"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "June 2017"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetR6_1 Pin=S?-4
+Added Pin To Net: NetName=-V Pin=S?-5
+Added Member To Class: ClassName=tinyCurrent_Version1 Member=Component S? 452403012014

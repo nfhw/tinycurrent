@@ -1,0 +1,33 @@
+Added Component: Designator=C5(WCAP-CSGP_0603, 1.6x0.8x0.8)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "CeramicType"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.com/pbs/datasheet/885012206046.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "885012206046"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PublishedDate"; Value = "Aug 2016"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RatedVoltage"; Value = "16V DC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100000pF"; VariantName = "[No Variations]"
+Added Component: Designator=C6(WCAP-CSGP_0603, 1.6x0.8x0.8)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "CeramicType"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.com/pbs/datasheet/885012206046.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "885012206046"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PublishedDate"; Value = "Aug 2016"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RatedVoltage"; Value = "16V DC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100000pF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VGND Pin=C5-1
+Added Pin To Net: NetName=+V Pin=C5-2
+Added Pin To Net: NetName=-V Pin=C6-1
+Added Pin To Net: NetName=VGND Pin=C6-2
+Added Member To Class: ClassName=tinyCurrent_Version1 Member=Component C5 0u1 16V
+Added Member To Class: ClassName=tinyCurrent_Version1 Member=Component C6 0u1 16V
+Added Room: Name=tinyCurrent_Version1

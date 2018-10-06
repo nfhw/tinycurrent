@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=NetR6_1 Pin=S1-4
+Removed Pin From Net: NetName=-V Pin=S1-5
+Change Component DesignItemId : Designator=S1 Old DesignItemId=452403012014 New DesignItemId=450404015514
+Change Component Comment : Designator=S1 Old Comment=452403012014 New Comment=450404015514
+Change Component Description : Designator=S1 Old Description=WS-SLSV 7.65x5.5 mm SMD Vertical New Description=WS-SLSU 6.7x2.7 mm SMD Right Angled, boss design
+Change Component Library : Designator=S1 Old Library=WS-SLSV.SchLib New Library=ALTIUM-WS-SLSU-rev17a.IntLib
+Change component parameters: Designator = "S1"; Footprint = "450404015514"; UniqueID = "\CSPCWCJU"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/450404015514.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "450404015514"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "March 2017"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetR6_1 Pin=S1-1
+Added Pin To Net: NetName=-V Pin=S1-2

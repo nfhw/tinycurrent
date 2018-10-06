@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=NetD1_2 Pin=U5-1
+Removed Pin From Net: NetName=NetR4_2 Pin=U5-2
+Removed Member From Class: ClassName=uCurrentnf_Version1 Member=U5
+Added Component: Designator=R16(VR5)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Variable Resistor, Thru-Hole; 3 Leads"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "VR5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Set Position"; Value = "0.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Sim Note"; Value = "Enter the Resistance value and the set point into parameter fields."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "200k"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=-V Pin=R16-1
+Added Pin To Net: NetName=+V Pin=R16-2
+Added Pin To Net: NetName=NetR6_1 Pin=R16-3
+Added Pin To Net: NetName=NetR4_2 Pin=U3-2
+Change Class Name : Old Net Name=uCurrentnf_Version1 New Net Name=tinyCurrent_Version1
+Added Member To Class: ClassName=tinyCurrent_Version1 Member=Component R16 RPot
+Change Room Name: Old Name=uCurrentnf_Version1 New Name=tinyCurrent_Version1
+Change Room Scope: Old Scope=InComponentClass('uCurrentnf_Version1') New Scope=InComponentClass('tinyCurrent_Version1')

@@ -43,7 +43,7 @@ See all <a href="scope_shots.md">scope shots</a> for comparison.
 - Banana plug sockets are _not_ gold plated → Testing shows that there is no measurable difference in conductivity
 - Slide switches with lower current rating than in original design → Tests have shown that the used switch can easily handle 5V/ 6A which should be far enough for this device
 - Shunt resistor R9 has 0.05% greater tolerance → Parts are hand selected using 7 1/2 Digit DMM with 4 wire measurement in 100 Ohm range
-- Pads for C5, C6 to fit caps on the virtual ground rails to prevent oscillation with capactivie loads
+- Pads for C5, C6 to fit caps on the virtual ground rails to prevent oscillation with capacitive loads
 - Some other BoM changes without negative implications
 
 ## Specifications
@@ -186,6 +186,22 @@ See all <a href="scope_shots.md">scope shots</a> for comparison.
     </th>
     <td colspan="3">
       &gt;50 hours (battery good LED ensures accurate measurement when LED is on). 2.65 V cutout voltage.
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align: left;">
+      Certifications
+    </th>
+    <td colspan="3">
+      CE
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align: left;">
+      Materials
+    </th>
+    <td colspan="3">
+      RoHS, REACH
     </td>
   </tr>
 </table>

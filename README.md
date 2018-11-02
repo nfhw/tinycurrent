@@ -30,7 +30,7 @@ maximum output voltage. Both measures combined lead to
 
 - Added BNC output for even lower noise when acquiring with high sampling rate, high input impedance instruments like an oscilloscope. The effect is lower noise compared to normal banana leads.
 See all <a href="scope_shots.md">scope shots</a> for comparison.
-- Added a 2-pin 1.25 mm JST ZH male header for powering the device externally to better use the device in permanent measurement setups. **Only use without battery**.
+- Added a 2-pin 1.25 mm JST ZH style male header for powering the device externally to better use the device in permanent measurement setups. **Only use without battery**.
 - Allow device to be fed with supply voltage of up to 5.5 V to increase the dynamic range (only when external power source us used).
 - Added header J6 which allows to install a THT resistor or bond wire to change the ratio of the voltage divider R6/ R7 to increase the dynamic range for positive currents. R6/ R7 have a ratio of 1/ 5 to allow for a max. positive output voltage of ~80% of the supply voltage.
 - "R-Variant" with reversed BNC connector optimized for attaching the device directly to an oscilloscope's input via a [BNC-to-BNC adapter](https://www.telegaertner.com/en/info/catalogue/coax/?IdTreeGroup=12989&IdProduct=3284).

@@ -72,7 +72,7 @@ See all <a href="scope_shots.md">scope shots</a> for comparison.
       nA
     </td>
     <td colspan="2">
-      ± 1250 mA (20 µV / mA burden voltage typical), contact resistance plays a role here. 10 µV due to the shunt resistor.
+      ± 1250 nA (20 µV / nA burden voltage typical), contact resistance plays a role here. 10 µV due to the shunt resistor.
     </td>
   </tr>
   <tr>
@@ -88,7 +88,7 @@ See all <a href="scope_shots.md">scope shots</a> for comparison.
       mA
     </td>
     <td colspan="2">
-      ± 1250 nA (10 µV / nA burden voltage)
+      ± 1250 mA (10 µV / mA burden voltage)
     </td>
   </tr>
   <tr>
@@ -101,7 +101,7 @@ See all <a href="scope_shots.md">scope shots</a> for comparison.
       nA
     </td>
     <td colspan="2">
-      ± 2550 mA (20 µV / mA burden voltage typical), contact resistance plays a role here. 10 µV due to the shunt resistor.
+      ± 2550 nA (20 µV / nA burden voltage typical), contact resistance plays a role here. 10 µV due to the shunt resistor.
     </td>
   </tr>
   <tr>
@@ -117,7 +117,7 @@ See all <a href="scope_shots.md">scope shots</a> for comparison.
       mA
     </td>
     <td colspan="2">
-      ± 2550 nA (10 µV / nA burden voltage)
+      ± 2550 mA (10 µV / mA burden voltage)
     </td>
   </tr>
   <tr>

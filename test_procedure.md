@@ -1,6 +1,6 @@
 # tinyCurrent Test Procedure
 
-## Resistive load
+## Resistive Load
 
 * Multimeter connected to the Device under Test (DUT) output
 * 5 VCC Load power supply
@@ -16,13 +16,15 @@
 
 ## Offset Voltage
 
-* Power switch to the SHORT position
+* Power switch to the SHORT position.
 * The current range doesn't matter as it is shorted.
-* Measure the output voltage and avoid touching the setup.
+* Measure the output voltage with a multimeter (DMM7510) and avoid touching the setup.
 
-| Expected value	|
+| Expected Outout Value	|
 |--:			|
-| < 50 uV		|
+| < 30 µV		|
+
+In comparision some uCurrent Gold with TI opamp can haveup to 200 µV as can be seen [here](https://youtu.be/1VlKoR0ldIE?t=1709).
 
 ## Offset Voltage with a capacitive Load
 
@@ -80,7 +82,7 @@ Reference:
 * Method 2 at [microsemi AN30](https://www.microsemi.com/document-portal/doc_view/134813-an30-basic-total-harmonic-distortion-thd-measurement)
 * Available in [wikipedia](https://en.wikipedia.org/wiki/Total_harmonic_distortion).  
 
-### Noise floor
+### Noise Floor
 
 Procedure:
 

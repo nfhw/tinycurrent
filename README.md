@@ -28,7 +28,7 @@ maximum output voltage. Both measures combined lead to
 
 ### Highlights
 
-- Added BNC output for even lower noise when acquiring with high sampling rate, high input impedance instruments like an oscilloscope. The effect is lower noise compared to normal banana leads.
+- Added BNC output for lower noise when acquiring data with a high input impedance instruments like an oscilloscope. The effect is lower noise compared to normal banana leads.
 See all <a href="scope_shots.md">scope shots</a> for comparison.
 - Added a 2-pin 1.25 mm JST ZH style male header for powering the device externally to better use the device in permanent measurement setups. **Only use without battery**.
 - Allow device to be fed with supply voltage of up to 5.5 V to increase the dynamic range (only when external power source us used).
@@ -170,6 +170,14 @@ See all <a href="scope_shots.md">scope shots</a> for comparison.
     </th>
     <td colspan="3">
       &lt; -60 dB
+    </td>
+  </tr>
+  <tr>
+    <th style="text-align: left;">
+      Bandwidth (-3 dB)
+    </th>
+    <td colspan="3">
+      300 kHz
     </td>
   </tr>
   <tr>

@@ -208,7 +208,7 @@ Generating : Top Overlay
 
 Used DCodes :
     D47
-    D49
+    D48
     D61
     D62
     D63
@@ -285,7 +285,7 @@ Generating : Mechanical 13
 
 
 Used DCodes :
-    D47
+    D48
     D96
 *************************************************************
 
@@ -320,7 +320,7 @@ Generating : Mechanical 1
 
 Used DCodes :
     D45
-    D49
+    D47
     D97
     D98
 *************************************************************

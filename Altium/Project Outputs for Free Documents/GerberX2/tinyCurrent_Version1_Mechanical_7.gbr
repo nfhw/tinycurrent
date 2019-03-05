@@ -1,9 +1,0 @@
-G04 Layer_Color=32768*
-%FSLAX45Y45*%
-%MOMM*%
-%TF.FileFunction,Other,Mechanical_7*%
-%TF.Part,Single*%
-G01*
-G75*
-%TF.MD5,534989287cfbb5178efbce60d3dea777*%
-M02*

@@ -1,4 +1,4 @@
-%TF.GenerationSoftware,Altium Limited,Altium Designer,18.1.9 (240)*%
+%TF.GenerationSoftware,Altium Limited,Altium Designer,19.0.12 (326)*%
 G04 Layer_Color=16711935*
 %FSLAX45Y45*%
 %MOMM*%
@@ -7,8 +7,8 @@ G04 Layer_Color=16711935*
 G01*
 G75*
 %TA.AperFunction,NonConductor*%
-%ADD45C,0.12700*%
-D45*
+%ADD48C,0.12700*%
+D48*
 X4090481Y1487000D02*
 G03*
 X4090481Y1487000I-650481J0D01*
@@ -21,5 +21,5 @@ X2190481Y1487000D02*
 G03*
 X2190481Y1487000I-650481J0D01*
 G01*
-%TF.MD5,9e3bdc569e29803efe0a699c020b3aac*%
+%TF.MD5,bd2c0a2b2e10495203788c63950fa35c*%
 M02*

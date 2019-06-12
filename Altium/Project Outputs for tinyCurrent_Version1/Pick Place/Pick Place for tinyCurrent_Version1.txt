@@ -1,0 +1,49 @@
+Altium Designer Pick and Place Locations
+D:\tinycurrent_gh\Altium\Project Outputs for tinyCurrent_Version1\Pick Place\Pick Place for tinyCurrent_Version1.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       11/06/19
+Time:       12:08
+Revision:   5bc7a0d8032cf36cc385465f16251708af5efb92
+Variant:    No variations
+Units used: mil
+
+Designator Comment                Layer       Footprint                           Center-X(mil) Center-Y(mil) Rotation Description                                                                                           
+SW1        "MFP 230"              TopLayer    MFP_230                             1757.874      1492.126      270      "Slide Switch"                                                                                        
+J6         61000413321            BottomLayer 61000413321                         725.600       2205.364      0        "WR-PHD 2.54 mm SMT Socket Header, 4p"                                                                
+J5         "1.25mm JST Connector" BottomLayer 653102131822                        1183.694      1681.213      180      "WR-WTB 1.25mm SMT Male Horizontal Shrouded Header, 2p"                                               
+R13        "6K8 0.05%"            BottomLayer RESC1608N                           1374.439      2113.373      270      ""                                                                                                    
+U4         MAX4239AUT             BottomLayer SOT-23-CH6_N                        1479.223      2058.255      90       "170 uA, 2 MHz Rail-to-Rail Operational Amplifier, 6-Pin SOT-23, Extended Temperature, Tape and Reel" 
+BT1        79527141               BottomLayer 79527141                            681.700       1455.471      270      "Battery Holder WA-BCPH, Battery Type: 2032p"                                                         
+J1         4mmBindingPostRed      TopLayer    PIN1                                606.298       585.433       0        ""                                                                                                    
+SW2        "MFP 230"              TopLayer    MFP_230                             210.630       1492.126      270      "Slide Switch"                                                                                        
+J4         4mmBindingPostBlack    TopLayer    PIN1                                1490.945      2559.055      0        ""                                                                                                    
+J3         4mmBindingPostRed      TopLayer    PIN1                                472.440       2559.055      0        ""                                                                                                    
+J2         4mmBindingPostBlack    TopLayer    PIN1                                1354.331      585.433       0        ""                                                                                                    
+C3         10pF                   BottomLayer WCAP-CSGP_0603,_1.6x0.8x0.8         1600.276      1997.763      270      "WCAP-CSGP Ceramic Capacitors, 0603, 10pF"                                                            
+C1         "0u1 16V"              BottomLayer WCAP-CSGP_0603,_1.6x0.8x0.8         1825.034      2185.513      180      "WCAP-CSGP Ceramic Capacitors, 0603, 100000pF"                                                        
+R12        270R                   BottomLayer RESC1608N                           1790.176      1944.197      180      ""                                                                                                    
+R8         270R                   BottomLayer RESC1608N                           1480.735      1934.200      360      ""                                                                                                    
+R5         "1K 0.05%"             BottomLayer RESC1608N                           1600.276      2143.469      90       ""                                                                                                    
+R3         "6K8 0.05%"            BottomLayer RESC1608N                           1685.564      2145.669      270      ""                                                                                                    
+R4         470R                   BottomLayer RESC1608N                           312.993       2220.473      90       ""                                                                                                    
+R6         "100K 1%"              BottomLayer RESC1608N                           967.907       2058.300      270      ""                                                                                                    
+R7         "100K 1%"              BottomLayer RESC1608N                           967.906       2176.411      90       ""                                                                                                    
+U3         STM809RWX6F            BottomLayer SOT23                               194.882       2220.472      180      ""                                                                                                    
+C2         "0u1 16V"              BottomLayer WCAP-CSGP_0603,_1.6x0.8x0.8         1182.372      2256.900      180      "WCAP-CSGP Ceramic Capacitors, 0603, 100000pF"                                                        
+D1         156120GS75000          BottomLayer WL-SMRW_1206_rectangular_Normal_use 244.095       2062.992      360      "WL-SMRW SMD Mono-color Reverse mount Waterclear, size 1206 rectangular, Green"                       
+R2         "10K 0.05%"            BottomLayer RESC1608N                           1527.559      956.693       270      ""                                                                                                    
+R9         "10R 0.05%"            BottomLayer RESC2012N                           1795.275      1122.047      360      ""                                                                                                    
+U2         LMV321ILT              BottomLayer SOT95P280X130-5N                    1073.611      2118.067      270      ""                                                                                                    
+R1         "0R01 0.1%"            BottomLayer 2512shuntresistor                   1785.434      903.543       360      "1206 Current Shunt"                                                                                  
+U1         MAX4239AUT             BottomLayer SOT-23-CH6_N                        1795.275      2066.929      90       "170 uA, 2 MHz Rail-to-Rail Operational Amplifier, 6-Pin SOT-23, Extended Temperature, Tape and Reel" 
+R10        270R                   BottomLayer RESC1608N                           1182.800      2162.865      270      ""                                                                                                    
+R11        "2K2 0.05%"            BottomLayer RESC1608N                           1685.564      1996.063      270      ""                                                                                                    
+R14        "2K2 0.05%"            BottomLayer RESC1608N                           1374.438      1967.704      270      ""                                                                                                    
+R15        "1K 0.05%"             BottomLayer RESC1608N                           1483.700      2190.200      360      ""                                                                                                    
+C4         10pF                   BottomLayer WCAP-CSGP_0603,_1.6x0.8x0.8         1299.634      2113.373      270      "WCAP-CSGP Ceramic Capacitors, 0603, 10pF"                                                            
+BC1        J01001A1944            TopLayer    ROS-51K101-400A4_V                  981.418       2559.280      90       "BNC 50R Straight Jack, Up to 10 GHz, -55 to 155 degC"                                                
+C5         "0u1 16V"              BottomLayer WCAP-CSGP_0603,_1.6x0.8x0.8         1292.000      2318.600      360      "WCAP-CSGP Ceramic Capacitors, 0603, 100000pF"                                                        
+C6         "0u1 16V"              BottomLayer WCAP-CSGP_0603,_1.6x0.8x0.8         1074.900      2260.500      90       "WCAP-CSGP Ceramic Capacitors, 0603, 100000pF"                                                        

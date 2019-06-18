@@ -13,6 +13,7 @@
 |1mV/uA   	|47K (46.80)   			|106.83   		|101.4			|112.2			|0.05%		|
 |1mV/mA   	|47R (47.20)	   		|105.93			|95.3			|116.56			|0.1%		|
 
+**Important Node**: The device can output a symmetric negative and positive output voltage to cover negative and positive currents so in theory it does not make a difference how the device is wired up. We have found, however, that in the nA range it is more likely to experience oscillation when the negative input is connected to positive side of the source or in other words if the device is used in reverse direction.
 
 ## Offset Voltage
 

@@ -20,8 +20,8 @@ noise** while measuring with an and oscilloscope. Another problem is the high
 dynamics in power draw caused by the aforementioned reasons.
 This is addressed by the possibility to
 **power the device from an external source**
-with up to 5.5 V and the possibility to tweak the device for a higher
-maximum output voltage. Both measures combined lead to
+with up to 5.5 V and bridge R7 using J6 to use the whole positive VDD
+as maximum positive output voltage. Both measures combined lead to
 **almost 3 times higher dynamic range**.
 
 ## Modifications to the original Design
@@ -40,7 +40,6 @@ See all <a href="scope_shots.md">scope shots</a> for comparison.
 - Increased width of some traces
 - Case and board shape to fit case
 - Removed test traces on PCB on all 4 corners as they are antennas
-- Banana plug sockets are _not_ gold plated → Testing shows that there is no measurable difference in conductivity
 - Slide switches with lower current rating than in original design → Tests have shown that the used switch can easily handle 5V/ 6A which should be far enough for this device
 - Shunt resistor R9 has 0.05% greater tolerance → Parts are hand selected using 7 1/2 Digit DMM with 4 wire measurement in 100 Ohm range
 - Pads for C5, C6 to fit caps on the virtual ground rails to prevent oscillation with capacitive loads

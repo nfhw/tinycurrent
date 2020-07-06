@@ -2,9 +2,9 @@
 
 ## Resistive Load
 
-* Multimeter connected to the Device under Test (DUT) output
-* 5 VCC Load power supply
-* Device turned ON
+* Multimeter connected to the Device under Test (DUT) output using **short leads**.
+* 5 VCC Load power supply.
+* Device turned ON.
 * Test the following current ranges and respective loads:
 
 |Current Range  |Load (precise value) [Ohms]	|Expected Output [mV]	|Min [mV]		|Max [mV]		|Accuracy	|
@@ -89,4 +89,4 @@ Procedure:
 
 * FFT rectangular window and measurements in dBV.
 * The noise floor is measured after the 1/f noise frequency range.
-* This measurement is subjected to the DSO noise, so first we measure with the tinyCurrent turned off, and then in the SHORT position
+* This measurement is subjected to the DSO noise, so first we measure with the tinyCurrent turned off, and then in the SHORT position.
